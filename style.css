@@ -1,0 +1,169 @@
+/* 
+Color pallete. This section defines variables for the color pallete,
+so that we can refer to particular colors by name instead of hexadecimal values.
+This is applied to the 'root' psuedo-element, which just means that these color
+variables are available to be used anywhere in our html document
+*/
+/* Color palette */
+:root {
+    --white-font: #040404;
+    --black-font: #f6f2f2;
+    --main-color: #3498db; /* Add a main color */
+    --accent-color: #2ecc71; /* Add an accent color */
+    --background-color: #f5f5f5;
+}
+
+/* Main container styles */
+.main-container {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: var(--black-font); /* Set the main font color */
+}
+
+/* Banner styles */
+.banner {
+    background: linear-gradient(to right, #333, #555); /* Adjust background colors */
+    text-align: center;
+    padding: 2em 0; /* Slightly reduce padding for a balanced look */
+    color: #fff; /* Change font color to white for contrast */
+    border-radius: 5px; /* Adding rounded corners for a consistent look */
+    margin-bottom: 20px; /* Adding margin for separation from the main content */
+}
+
+
+
+/* Banner title styles */
+.banner-title {
+    font-size: 1.8em; /* Adjust the font size as needed */
+    font-weight: bold;
+    background-color: #c02d2d; /* Background color */
+    color: #121010; /* Text color */
+    padding: 10px 20px; /* Adding padding for spacing */
+    border-radius: 5px; /* Adding rounded corners */
+    margin-bottom: 10px; /* Adding margin to separate from the subtitle */
+}
+
+
+/* Banner subtitle styles */
+.banner-subtitle {
+    font-size: 1.8em;
+    opacity: 0.8;
+}
+
+/* Team member card styles */
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-font);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    margin: 1.5em 0;
+}
+
+/* Team member card image styles */
+.team-member-card-image {
+    width: 100%;
+}
+
+/* Team member card blurb styles */
+.team-member-card-blurb {
+    padding: 1em; /* Add padding for better spacing */
+}
+
+
+
+/* Grid area names for specific elements */
+#banner {
+    grid-area: banner; /* Give the grid-area a name */
+}
+
+#teamMemberCard1 {
+    grid-area: card1; /* Give the grid-area a name */
+}
+
+#teamMemberCard2 {
+    grid-area: card2; /* Give the grid-area a name */
+}
+
+#teamMemberCard3 {
+    grid-area: card3; /* Give the grid-area a name */
+}
+
+#teamMemberCard1 {
+    grid-area: card1; /* Give the grid-area a name */
+}
+
+#teamMemberCard2 {
+    grid-area: card2; /* Give the grid-area a name */
+}
+
+#teamMemberCard3 {
+    grid-area: card3; /* Give the grid-area a name */
+}
+
+#teamMemberCard1 {
+    grid-area: card1; /* Give the grid-area a name */
+}
+
+#teamMemberCard2 {
+    grid-area: card2; /* Give the grid-area a name */
+}
+
+#teamMemberCard3 {
+    grid-area: card3; /* Give the grid-area a name */
+}
+
+
+/* Flexible layout grid */
+.main-container {
+    display: grid;
+    column-gap: 1em;
+}
+
+/* Responsive layout breakpoints */
+.main-container {
+    grid-template-areas:
+        "banner"
+        "card1"
+        "card2"
+        "card3"
+        "clientsTitle"
+        "client1"
+        "client2"
+        "client3"
+        "client4"
+        "client5"
+        "client6"
+        "client7"
+        "client8";
+}
+
+@media (min-width: 50em) {
+    .main-container {
+        grid-template-areas:
+            "banner"
+            "card1 card2"
+            "card3 card3"
+            "clientsTitle clientsTitle"
+            "client1 client2"
+            "client3 client4"
+            "client5 client6"
+            "client7 client8";
+    }
+}
+
+@media (min-width: 75em) {
+    .main-container {
+        grid-template-areas:
+            "banner banner banner"
+            "card1 card2 card3"
+            "clientsTitle clientsTitle clientsTitle"
+            "client1 client2 client3"
+            "client4 client5 client6"
+            "client7 client8 client8";
+    }
+}
+
