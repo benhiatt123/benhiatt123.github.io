@@ -6,7 +6,7 @@ variables are available to be used anywhere in our html document
 */
 /* Color palette */
 :root {
-    --white-font: #040404;
+    --white-font: #a41616;
     --black-font: #f6f2f2;
     --main-color: #3498db; /* Add a main color */
     --accent-color: #2ecc71; /* Add an accent color */
@@ -37,7 +37,7 @@ variables are available to be used anywhere in our html document
 .banner-title {
     font-size: 1.8em; /* Adjust the font size as needed */
     font-weight: bold;
-    background-color: #c02d2d; /* Background color */
+    background-color: #f0f0f0; /* Background color */
     color: #121010; /* Text color */
     padding: 10px 20px; /* Adding padding for spacing */
     border-radius: 5px; /* Adding rounded corners */
