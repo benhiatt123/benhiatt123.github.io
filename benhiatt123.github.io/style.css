@@ -1,0 +1,126 @@
+/* Color palette */
+:root {
+    --white-font: #070606;
+    --black-font: #050101;
+    --main-color: #3498db;
+    --background-color: #0c0b0b;
+}
+
+/* Apply the same width and height to all images */
+img {
+    width: 200px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover space */
+}
+/* Base styles for all screen sizes */
+img {
+    width: 200px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover space */
+}
+
+.main-container {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: var(--black-font);
+    padding: 2em;
+}
+
+.banner {
+    background-color: #eddede;
+    text-align: center;
+    padding: 2em 0;
+    color: #0b0808;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.banner-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #100b0b;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: explode 1.5s ease-in-out infinite alternate;
+}
+
+.banner-subtitle {
+    font-size: 2.5em; /* Adjust font size for the subtitle */
+    opacity: 0.8;
+    margin-top: 10px; /* Add margin between title and subtitle */
+}
+
+@keyframes explode {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-font);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(220, 211, 211, 0.1);
+    padding: 1.5em;
+    margin: 1.5em 0;
+}
+
+.team-member-card-image {
+    width: 100%;
+    height: 60%; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.team-member-card-blurb {
+    padding: 1em;
+    font-size: 20px; /* Change the font size as needed */
+    color: #f0ebeb; /* Change the text color as needed */
+}
+
+
+/* Media queries for tablet and phone screens */
+@media (max-width: 1024px) {
+    .main-container {
+        padding: 1em;
+    }
+    
+    .banner {
+        padding: 1em;
+    }
+    
+    .team-member-card {
+        margin: 1em 0;
+        padding: 1em;
+    }
+    
+    .team-member-card-image {
+        height: 40%;
+    }
+    
+    .team-member-card-blurb {
+        font-size: 14px;
+    }
+}
+
+/* Media queries for phone screens */
+@media (max-width: 768px) {
+    .team-member-card-image {
+        height: 30%;
+    }
+    
+    .team-member-card-blurb {
+        font-size: 12px;
+    }
+}
